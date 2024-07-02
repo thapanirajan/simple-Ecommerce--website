@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get the best printers at the best price">
+    <meta name="keywords" content="Printers,Best printers,High Quality Printers">
+    <!-- Title of the page -->
+    <title>Product</title>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <!-- Font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&family=Sora&family=Work+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/images/home_images/fav.png" type="image/x-icon">
+    <!--Internal Css-->
+    <style>
+        /*Using position to keep the overlap the text over the background*/
+        .slogan {
+            position: absolute;
+            top: 25%;
+            left: 20%;
+        }
+
+        .product_category {
+            display: flex;
+            justify-content: end;
+
+        }
+
+        .choose_category {
+            font-size: 1.75rem;
+            border: 0px;
+            margin: 10px;
+        }
+
+        .choose_category:hover {
+            color: #fe4c50;
+            transform: scale(1.1);
+        }
+
+        .gap {
+            width: 7%;
+
+        }
+
+        .cart_image {
+            width: 30px;
+            position: relative;
+            top: 3px;
+        }
+
+        .cart_display {
+
+            visibility: hidden;
+            transition-property: width;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+            background-color: #dfdfda;
+            height: 100%;
+            width: 0%;
+            position: fixed;
+            right: 0;
+            padding: 10px;
+            box-shadow: 0 0.5rem 1rem;
+
+        }
+
+        .item_container {
+            font-family: 'Roboto', 'sans-serif';
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            height: 67%;
+        }
+
+        .cart_checkout {
+            position: absolute;
+            bottom: 0px;
+            height: 180px;
+            /* background-color: white;*/
+        }
+
+        .items {
+            font-family: 'Roboto', 'sans-serif';
+            height: 2.7rem;
+            margin-left: 70px;
+            overflow: hidden;
+        }
+
+        #close_cart {
+            position: relative;
+            left: 70px;
+        }
+
+        #close_cart:hover {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Ddd to cart section-->
+    <div class="cart_display slab">
+        <h1 class="items">Shopping Items <span id="close_cart"> <img src="../images/icons/cross.png" alt=""
+                    srcset=""><span>
+        </h1>
+        <div class="item_container"></div>
+        <div class="cart_checkout">
+            <h2 style="font-size: 2.2rem;" class="sans">Total: <span id="total_price"
+                    style="position: absolute; right: 30px;"></span></h2>
+            <p>Shipping and Other taxes are calculated at Check Out</p>
+            <button class="button_design" style="width: 370px; margin-top:10px; margin-bottom: 0;">View Cart</button>
+            <a href="checkout.html"><button class="button_design checkout" style="width: 370px; margin-top: 10px;">Check
+                    Out</button></a>
+        </div>
+    </div>
+
+    <!-- A header section of the page -->
+    <header>
+        <nav>
+            <div class="navbar flex-container">
+                <div class="logo">
+                    <h1><a href="/index.html">
+                            <img src="/images/home_images/fav.png" alt="" height="60px">
+                        </a></h1>
+                </div>
+                <div class="nav-links">
+                    <ul class="flex-container margin-auto">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a style="color: red;" href="/pages/products.html">Product</a></li>
+                        <li><a href="/pages/research.html">Research</a></li>
+                        <li><a href="/pages/blogpage.html">Blog</a></li>
+                        <li><a href="/pages/AboutUs.html">About us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <!--Background image-->
+        <!--inline css is used to define the height and width of the background-->
+        <img style="width: 100%; height: 70vh;" src="../images/background_image.png" alt="">
+        <!--Business slogan to start the page-->
+        <!--Using inline css to declare the font size and using slab class to decide the font family-->
+        <h1 class="slogan slab" style="font-size:4rem;">
+            <span class="bright">Ink </span><span class="dark">Your</span> <span class="bright">Ideas, </span>
+            <span class="dark">Your </span><span class="bright">Brilliance.</span>
+        </h1>
+    </header>
+
+    <!--Div used to display details on a product-->
+    <div class="product_layout">
+        <img src="../images/product_image/1.png" id="layout_image" style="width: 80%;" alt="">
+
+        <div class="layout_description">
+            <h1 class="layout_title" style="font-size: 2.5rem;">Product 1</h1>
+            <img src="../images/icons/cross.png" id="close_product" alt="">
+            <p style="font-size: 2rem;">
+                <span class="layout_price" style="color: #fe4c50; font-weight: bold;">$299</span>
+                <span style="font-size:1.7rem;color:rgb(53, 52, 52);"><del>$999</del></span>
+            </p>
+            <p>Quantity</p>
+            <div class="show_quantity">
+                <img src="../images/icons/minus.png" alt="" id="minus" style="margin-top:3px;">
+                <p id="quantity_number" style="border: 1px solid black; padding: 1px 4px;">1</p>&nbsp;
+                <img src="../images/icons/plus.png" alt="" id="plus" style="margin-top:3px;">
+            </div>
+            <div class="sale_timer">
+                <h1><span style="font-size: 1.5rem;">Hurry Up! </span><span style="font-size:1.2rem;">Sales Ends
+                        in</span></h1>
+                <div class="timer">
+                    <div class="day_box">
+                        <h1 id="day">01</h1>
+                        <p>Days</p>
+                    </div>
+                    <div class="hour_box">
+                        <h1 id="hour">03</h1>
+                        <p>Hour</p>
+                    </div>
+                    <div class="minute_box">
+                        <h1 id="minutes">60</h1>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="second_box">
+                        <h1 id="seconds">60</h1>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+            </div>
+            <button class="layout_cart button_design "
+                style="background-color: white; color: #fe4c50; border: 1px solid #fe4c50; margin-bottom: 0%;">Add To
+                Cart</button>
+            <a href="checkout.html"><button class="button_design checkout">Buy Now</button></a>
+            <div class="layout_product_description">
+                <div class="des_title">
+                    <h2>Product Description</h2>
+                    <span><img src="../images/icons/minus.png" alt="" id="close_desc" style="margin-top:3px;"></span>
+                </div>
+                <hr>
+                <div id="layout_about">
+                    <ol>
+                        <br>
+                        <li>
+                            Versatile Printing Solutions:
+                            <ul>
+                                <li>Adaptable to various printing requirements.</li>
+                                <li>Consistent and reliable performance.</li>
+                                <li>Connectivity options for seamless integration.</li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li>
+                            Compact Printing Hub:
+                            <ul>
+                                <li>
+                                    Space-saving design suitable for any setting.
+                                </li>
+                                <li>
+                                    Efficient and quick printing capabilities.
+                                </li>
+                                <li>
+                                    User-friendly interface for easy operation.
+                                </li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li>
+                            All-in-One Convenience:
+                            <ul>
+                                <li>
+                                    Streamlined functionality for print, scan, and copy tasks.
+                                </li>
+                                <li>
+                                    Flexible wireless and mobile printing options.
+                                </li>
+                                <li>
+                                    Intuitive controls for a hassle-free experience.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Main section of the page where the products will be shown-->
+    <main id="main">
+
+        <!--The title of the page is displayed-->
+        <div class="title_container">
+            <!--Using inline Css as there is only one page title-->
+            <h1 class="page_title slab" id="title" style="font-size: 2rem;">All Products</h1>
+        </div>
+
+        <!--Different categories are stored in this div-->
+        <div class="product_category">
+            <button class="choose_category" onclick="arrange('.latest')">Latest</button>
+            <button class="choose_category" onclick="arrange('.trending')">Trending</button>
+            <button class="choose_category" onclick="arrange('.product')">All Products</button>
+            <div class="gap"></div>
+        </div>
+
+        <!--This div creates a container for all the products displayed-->
+        <div class="products dark">
+
+            <!--This div stores a single product in it-->
+            <div class="product ">
+                <!--This div is used to store the image of product-->
+                <div class="image_container">
+                    <img class="product_image" src="../images/product_image/1.png" alt="product image">
+                </div>
+                <!--ALl the information of product is stored inside the following div-->
+                <div class="product_description">
+                    <!--this div seprated the information of product with product-->
+                    <div class="about_product">
+                        <h2 class="product_name sans">HP DeskJet 2755e </h2>
+                        <!--slab and bright class gives the font and color-->
+                        <!--Inline css is used to give font size-->
+                        <h2 class="price slab bright" style="font-size: 2rem;">
+                            <span>$</span><span>399</span>
+                            <span style="color: rgb(85, 81, 81); font-size:1.7rem;"><del>$599</del></span>
+                        </h2>
+                        <div class="stars">
+                            <!--Star icon is imported from the link using fas and fa-star class-->
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                        </div>
+                    </div>
+                    <button class="add_to_cart button_design"><img src="../images/icons/cart.png" class="cart_image"
+                            alt="cart icon"> Add to Cart &nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button class="add_to_cart shop button_design"> Shop Now</button>
+                </div>
+            </div>
+
+            <!--This div stores a single product in it-->
+            <div class="product">
+                <div class="image_container">
+                    <img class="product_image" src="../images/product_image/2.png" alt="product image">
+                </div>
+                <div class="product_description">
+                    <div class="about_product">
+                        <h2 class="product_name sans">OfficeJet 8015e</h2>
+                        <h2 class="price slab bright" style="font-size: 2rem;">
+                            <span>$</span><span>459</span>
+                            <span style="color: rgb(85, 81, 81); font-size:1.7rem;"><del>$699</del></span>
+                        </h2>
+                        <div class="stars">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                        </div>
+                    </div>
+
+                    <button class="add_to_cart button_design"><img src="../images/icons/cart.png" class="cart_image"
+                            alt="cart icon"> Add to Cart &nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button class="add_to_cart shop button_design"> Shop Now</button>
+                </div>
+            </div>
+
+            <!--This div stores a single product in it-->
+            <div class="product latest">
+                <div class="image_container">
+                    <img class="product_image" src="../images/product_image/3.png" alt="product image">
+                </div>
+                <div class="product_description">
+                    <div class="about_product">
+                        <h2 class="product_name sans">Epson Expression</h2>
+                        <h2 class="price slab bright" style="font-size: 2rem;">
+                            <span>$</span><span>799</span>
+                            <span style="color: rgb(85, 81, 81); font-size:1.7rem;"><del>$999</del></span>
+                        </h2>
+                        <div class="stars">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+
+                        </div>
+                    </div>
+
+                    <button class="add_to_cart button_design"><img src="../images/icons/cart.png" class="cart_image"
+                            alt="cart icon"> Add to Cart &nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button class="add_to_cart shop button_design"> Shop Now</button>
+                </div>
+            </div>
+
+            <!--This div stores a single product in it-->
+            <div class="product latest">
+                <div class="image_container">
+                    <img class="product_image" src="../images/product_image/4.png" alt="product image">
+                </div>
+                <div class="product_description">
+                    <div class="about_product">
+                        <h2 class="product_name sans">PIXMA TS6420a </h2>
+                        <h2 class="price slab bright" style="font-size: 2rem;">
+                            <span>$</span><span>259</span>
+                            <span style="color: rgb(85, 81, 81); font-size:1.7rem;"><del>$399</del></span>
+                        </h2>
+                        <div class="stars">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                        </div>
+                    </div>
+
+                    <button class="add_to_cart button_design"><img src="../images/icons/cart.png" class="cart_image"
+                            alt="cart icon"> Add to Cart &nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button class="add_to_cart shop button_design"> Shop Now</button>
+                </div>
+            </div>
+
+            <!--This div stores a single product in it-->
+            <div class="product trending">
+                <div class="image_container">
+                    <img class="product_image" src="../images/product_image/5.png" alt="product image">
+                </div>
+                <div class="product_description">
+                    <div class="about_product">
+                        <h2 class="product_name sans">PIXMA™ TR150</h2>
+                        <h2 class="price slab bright" style="font-size: 2rem;">
+                            <span>$</span><span>179</span>
+                            <span style="color: rgb(85, 81, 81); font-size:1.7rem;"><del>$459</del></span>
+                        </h2>
+                        <div class="stars">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                        </div>
+                    </div>
+
+                    <button class="add_to_cart button_design"><img src="../images/icons/cart.png" class="cart_image"
+                            alt="cart icon"> Add to Cart &nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button class="add_to_cart shop button_design"> Shop Now</button>
+                </div>
+            </div>
+
+            <!--This div stores a single product in it-->
+            <div class="product ">
+                <div class="image_container">
+                    <img class="product_image" src="../images/product_image/6.png" alt="product image">
+                </div>
+                <div class="product_description">
+                    <div class="about_product">
+                        <h2 class="product_name sans">PIXMA TR8620a</h2>
+                        <h2 class="price slab bright" style="font-size: 2rem;">
+                            <span>$</span><span>237</span>
+                            <span style="color: rgb(85, 81, 81); font-size:1.7rem;"><del>$287</del></span>
+                        </h2>
+                        <div class="stars">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                        </div>
+                    </div>
+
+                    <button class="add_to_cart button_design"><img src="../images/icons/cart.png" class="cart_image"
+                            alt="cart icon"> Add to Cart &nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button class="add_to_cart shop button_design"> Shop Now</button>
+                </div>
+            </div>
+
+            <!--This div stores a single product in it-->
+            <div class="product trending latest">
+                <!--This div is used to store the image of product-->
+                <div class="image_container">
+                    <img class="product_image" src="../images/product_image/7.png" alt="product image">
+                </div>
+                <!--ALl the information of product is stored inside the following div-->
+                <div class="product_description">
+                    <!--this div seprated the information of product with product-->
+                    <div class="about_product">
+                        <h2 class="product_name sans">DeskJet 4155e </h2>
+                        <!--slab and bright class gives the font and color-->
+                        <!--Inline css is used to give font size-->
+                        <h2 class="price slab bright" style="font-size: 2rem;">
+                            <span>$</span><span>67</span>
+                            <span style="color: rgb(85, 81, 81); font-size:1.7rem;"><del>$124</del></span>
+                        </h2>
+                        <div class="stars">
+                            <!--Star icon is imported from the link using fas and fa-star class-->
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                        </div>
+                    </div>
+                    <button class="add_to_cart button_design"><img src="../images/icons/cart.png" class="cart_image"
+                            alt="cart icon"> Add to Cart &nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button class="add_to_cart shop button_design"> Shop Now</button>
+                </div>
+            </div>
+
+            <!--This div stores a single product in it-->
+            <div class="product ">
+                <!--This div is used to store the image of product-->
+                <div class="image_container">
+                    <img class="product_image" src="../images/product_image/8.png" alt="product image">
+                </div>
+                <!--ALl the information of product is stored inside the following div-->
+                <div class="product_description">
+                    <!--this div seprated the information of product with product-->
+                    <div class="about_product">
+                        <h2 class="product_name sans">OfficeJet Pro</h2>
+                        <!--slab and bright class gives the font and color-->
+                        <!--Inline css is used to give font size-->
+                        <h2 class="price slab bright" style="font-size: 2rem;">
+                            <span>$</span><span>353</span>
+                            <span style="color: rgb(85, 81, 81); font-size:1.7rem;"><del>$433</del></span>
+                        </h2>
+                        <div class="stars">
+                            <!--Star icon is imported from the link using fas and fa-star class-->
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                        </div>
+                    </div>
+                    <button class="add_to_cart button_design"><img src="../images/icons/cart.png" class="cart_image"
+                            alt="cart icon"> Add to Cart &nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button class="add_to_cart shop button_design"> Shop Now</button>
+                </div>
+            </div>
+
+            <!--This div stores a single product in it-->
+            <div class="product latest">
+                <!--This div is used to store the image of product-->
+                <div class="image_container">
+                    <img class="product_image" src="../images/product_image/9.png" alt="product image">
+                </div>
+                <!--ALl the information of product is stored inside the following div-->
+                <div class="product_description">
+                    <!--this div seprated the information of product with product-->
+                    <div class="about_product">
+                        <h2 class="product_name sans">ENVY Inspire</h2>
+                        <!--slab and bright class gives the font and color-->
+                        <!--Inline css is used to give font size-->
+                        <h2 class="price slab bright" style="font-size: 2rem;">
+                            <span>$</span><span>143</span>
+                            <span style="color: rgb(85, 81, 81); font-size:1.7rem;"><del>$299</del></span>
+                        </h2>
+                        <div class="stars">
+                            <!--Star icon is imported from the link using fas and fa-star class-->
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                            <img src="../images/icons/star.png" style="width: 30px;" alt="">
+                        </div>
+                    </div>
+                    <button class="add_to_cart button_design"><img src="../images/icons/cart.png" class="cart_image"
+                            alt="cart icon"> Add to Cart &nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button class="add_to_cart shop button_design"> Shop Now</button>
+                </div>
+            </div>
+        </div>
+
+
+        </section>
+        <section class="footer ">
+            <div class="emails footer-flex">
+                <p>Email: InkspotPrint@gmail.com</p>
+                <p>Phone: 01-21321,01-321321</p>
+                <p>Address: Kathmandu,Nepal</p>
+            </div>
+
+            <div class="navigations">
+                <div style="font-size: 2rem;">
+                    Navigations
+                </div>
+                <div class="footer-flex">
+                    <div><a href="/index.html">Home</a></div>
+                    <div><a href="/pages/blogpage.html">Blog</a></div>
+                    <div><a href="/pages/products.html">Product</a></div>
+                    <div><a href="/pages/research.html">Research</a></div>
+                    <div><a href="/pages/aboutus.html">About Us</a></div>
+                </div>
+            </div>
+            <div class="socials footer-flex">
+                <div style="font-size: 2rem;">Socials</div>
+                <div>
+                    <a href="https://www.facebook.com/"><img src="/images/home_images/facbook.png" alt=""></a>
+                    <a href="https://www.instagram.com/"><img src="/images/home_images/instagram.png" alt=""></a>
+                    <a href="https://github.com/"><img src="/images/home_images/github.png" alt=""></a>
+                    <a href="https://twitter.com/?lang=en"> <img src="/images/home_images/twitter.png" alt=""></a>
+                </div>
+            </div>
+            <a style="text-decoration: none;" href="#top">
+                <div class="contacts">
+                    <div> Go To Top</div>
+                    <div> <img src="/images/home_images/uparrow.png" width="30px" alt=""></div>
+                </div>
+            </a>
+        </section>
+
+        <!--Connecting the ecternall css-->
+        <script src="../JavaScript/script.js"></script>
+    </main>
+</body>
+
+</html>

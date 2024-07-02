@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- meta description -->
+    <meta name="description"
+        content="InkSpot: Your Ultimate Source for Printer Supplies, Materials, and Solutions. With high-quality printer supplies and informative guides, we make your printing experience efficient and hassle-free.">
+
+    <!-- title  -->
+    <title>InkSpot</title>
+
+    <!-- link to css  -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+
+    <!-- link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&family=Sora&family=Work+Sans&display=swap"
+        rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/images/home_images/fav.png" type="image/x-icon">
+
+    <!-- internal css  -->
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Work Sans', 'sans-serif';
+            background-color: #f5f5f5;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h4 {
+            font-size: 2rem;
+            color: var(--maincolor);
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            line-height: 3rem;
+        }
+
+        .blog {
+            width: 100%;
+            display: flex;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .boxrecent {
+            font-family: 'Sora', sans-serif;
+            border: 2px solid red;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 5px;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(54, 46, 46, 0.3);
+            cursor: pointer;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .boxrecent:hover {
+            scale: 1.05;
+        }
+
+        .boxrecent img {
+            object-fit: cover;
+        }
+
+        .blog_image {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 300px;
+        }
+
+        .paragraph2 {
+            margin-left: 10px;
+        }
+
+        .blog_paragraph {
+            margin: 10px;
+            font-family: 'Work Sans', 'sans-serif';
+            font-size: 1rem;
+            font-weight: lighter;
+        }
+
+        .recentbtn {
+            font-size: 1.5rem;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+    <!-- header  -->
+    <header>
+
+        <!-- first nav   -->
+        <div class="first-nav" id="top">
+            <h5 class="slidertext">
+                <div>50% OFF YOUR ORDER!</div>
+                <div>LIMITED TIME!</div>
+            </h5>
+        </div>
+
+        <!-- main-nav  -->
+
+        <nav>
+            <div class="navbar flex-container">
+                <div class="logo">
+                    <h1><a href="/index.html">
+                            <img src="images/home_images/fav.png" alt="" height="60px">
+                        </a></h1>
+                </div>
+                <div class="nav-links">
+                    <ul class="flex-container margin-auto">
+                        <li><a style="color: red;" href="index.html">Home</a></li>
+                        <li><a href="pages/products.html">Product</a></li>
+                        <li><a href="pages/research.html">Research</a></li>
+                        <li><a href="pages/blogpage.html">Blog</a></li>
+                        <li><a href="pages/AboutUs.html">About us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+
+    </header>
+    <!-- end of header  -->
+
+
+    <!-- intro section  -->
+    <section class="intro ">
+        <div class="intro-color flex-container">
+            <div class="intro-text">
+                <h4>Best quality printers</h4>
+                <h2>Boost your productivity </h2>
+                <h2>with our advanced </h2>
+                <h2>printer</h2>
+                <div>
+                    <a href="#shop" style="color: white;">
+                        <button class="btn">Shop now
+                    </a>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="image">
+                <div id="img">
+                    <img src="images/home_images/printer.png" alt="" style="height: 470px;">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- end of intro section  -->
+
+
+    <!-- our services section  -->
+    <section class="our-services">
+
+        <div class="services">
+            <div class="service-flex">
+                <img class="services-icons" src="images/home_images/shipping.jpg">
+                <p> free Shipping</p>
+
+            </div>
+            <div class="service-flex">
+                <img class="services-icons" src="images/home_images/warrenty.webp" alt="">
+                <p>Extended warranty </p>
+            </div>
+            <div class="service-flex">
+                <img src="images/home_images/secure-payment2785.jpg" alt="" class="services-icons">
+                <p>Secure payment</p>
+            </div>
+            <div class="service-flex">
+                <img src="images/home_images/servicing.png" alt="" class="services-icons">
+                <p> Free servicing</p>
+            </div>
+        </div>
+    </section>
+    <!-- end of our services section  -->
+
+
+
+
+    <!-- featured product section  -->
+    <section class="featured-product" id="shop">
+        <div class="featured-title">
+            <div style="font-weight: bold; font-size: 2rem;">
+                FEATURED PRODUCTS
+            </div>
+            <div style="font-size: 0.9rem; opacity: 0.7;">Best quality printers from top brands </div>
+        </div>
+
+        <!-- product card  -->
+        <div class="product-card-container">
+
+            <div class="product-card card " data-name="p1">
+                <img src="images/home_images/printer2.png">
+                <h3>MAXIFY MB2750 series</h3>
+                <div class="price">$939.00</div>
+                <div><button class="button_design">Show details</button></div>
+            </div>
+            <div class="product-card card" data-name="p2">
+                <img src="images/home_images/printer3.png">
+                <h3>Fuji Xerox DocuCentre s2420</h3>
+                <div class="price">$1500.00</div>
+                <div><button class="button_design">Show details</button></div>
+            </div>
+            <div class="product-card card" data-name="p3">
+                <img src="images/home_images/printer4.png">
+                <h3>Samsung X press SL-M2070</h3>
+                <div class="price">$800.00</div>
+                <div><button class="button_design">Show details</button></div>
+
+            </div>
+            <div class="product-card card" data-name="p4">
+                <img src="images/home_images/printer5.png">
+                <h3>Epson Expression Home XP-440</h3>
+                <div class="price">$400.00 </div>
+                <div><button class="button_design">Show details</button></div>
+            </div>
+            <div class="product-card card" data-name="p5">
+                <img src="images/home_images/printer6.png">
+                <h3>Epson EcoTank L365</h3>
+                <div class="price">$600.00</div>
+                <div><button class="button_design">Show details</button></div>
+            </div>
+            <div class="product-card card" data-name="p6">
+                <img src="images/home_images/printer7.png">
+                <h3>HP Pro P1108 Laserjet</h3>
+                <div class="price">$1200.00</div>
+                <div><button class="button_design">Show details</button></div>
+            </div>
+            <div class="product-card card" data-name="p7">
+                <img src="images/home_images/printer8.png">
+                <h3>Epson ecoTank L4150</h3>
+                <div class="price">$850.00</div>
+                <div><button class="button_design">Show details</button></div>
+            </div>
+            <div class="product-card card" data-name="p8">
+                <img src="images/home_images/printer9.png">
+                <h3>The Cannon PIXMA E510</h3>
+                <div class="price">$933.00</div>
+                <div><button class="button_design">Show details</button></div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section class="product-preview">
+        <div class="preview " data-target="p1">
+            <img class="fa-xmark" src="images/home_images/multiply-sign.png">
+            <img src="images/home_images/printer2.png">
+            <h3>MAXIFY MB2750</h3>
+            <div class="stars flex-container">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star.png" alt="">
+                <span>( 250 )</span>
+            </div>
+            <p>The Canon MAXIFY is a series of printers designed for both home and office use.
+            </p>
+            <div class="price">RS 2038</div>
+            <div class="button">
+                <a href="pages/products.html" onclick="redirect()" class="buy">Buy now</a>
+                <a href="pages/products.html" onclick="redirect()" class="add-to-cart">Add to cart</a>
+
+            </div>
+        </div>
+        <div class="preview" data-target="p2">
+            <img class="fa-xmark" src="images/home_images/multiply-sign.png">
+            <img src="images/home_images/printer3.png">
+            <h3>Fuji Xerox </h3>
+            <div class="stars flex-container">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star.png" alt="">
+                <span>( 350 )</span>
+            </div>
+            <p>A multifunctional printer with capabalities for printing and photocopying at up to 28 page per minute.
+            </p>
+            <div class="price">$1500.00</div>
+            <div class="button">
+                <a href="pages/products.html" onclick="redirect()" class="buy">Buy now</a>
+                <a href="pages/products.html" onclick="redirect()" class="add-to-cart">Add to cart</a>
+
+            </div>
+        </div>
+        <div class="preview" data-target="p3">
+            <img class="fa-xmark" src="images/home_images/multiply-sign.png">
+            <img src="images/home_images/printer3.png">
+            <h3>Samsung Xpres SL-M2070</h3>
+            <div class="stars flex-container">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star.png" alt="">
+                <span>( 120 )</span>
+            </div>
+            <p>The Samsung Xpress SL-M2070 is a laser printer with mono printing and copying capabilities. </p>
+            <div class="price">$800.00</div>
+            <div class="button">
+                <a href="/pages/products.html" onclick="redirect()" class="buy">Buy now</a>
+                <a href="/pages/products.html" onclick="redirect()" class="add-to-cart">Add to cart</a>
+
+            </div>
+        </div>
+        <div class="preview" data-target="p4">
+            <img class="fa-xmark" src="images/home_images/multiply-sign.png">
+            <img src="images/home_images/printer3.png">
+            <h3>Epson Expression Home XP-440</h3>
+            <div class="stars flex-container">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star.png" alt="">
+                <span>( 300 )</span>
+            </div>
+            <p>The Epson Expression Home XP-440 is a compact, wireless all-in-one printer designed for easy, creative
+                printing. </p>
+            <div class="price">$400.00</div>
+            <div class="button">
+                <a href="/pages/products.html" onclick="redirect()" class="buy">Buy now</a>
+                <a href="/pages/products.html" onclick="redirect()" class="add-to-cart">Add to cart</a>
+
+            </div>
+        </div>
+        <div class="preview" data-target="p5">
+            <img class="fa-xmark" src="images/home_images/multiply-sign.png">
+            <img src="images/home_images/printer3.png">
+            <h3>Epson EcoTank L365</h3>
+            <div class="stars flex-container">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star.png" alt="">
+                <span>( 100 )</span>
+            </div>
+            <p>The Epson Expression Home XP-440 is a compact, wireless all-in-one printer designed for easy, creative
+                printing. </p>
+            <div class="price">$600.00</div>
+            <div class="button">
+                <a href="/pages/products.html" onclick="redirect()" class="buy">Buy now</a>
+                <a href="/pages/products.html" onclick="redirect()" class="add-to-cart">Add to cart</a>
+
+            </div>
+        </div>
+        <div class="preview" data-target="p6">
+            <img class="fa-xmark" src="images/home_images/multiply-sign.png">
+            <img src="images/home_images/printer3.png">
+            <h3>HP Pro P1108 Laserjet</h3>
+            <div class="stars flex-container">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star.png" alt="">
+                <span>( 250 )</span>
+            </div>
+            <p>The HP LaserJet Pro P1108 is a monochrome laser printer </p>
+            <div class="price">$1200.00</div>
+            <div class="button">
+                <a href="/pages/products.html" onclick="redirect()" class="buy">Buy now</a>
+                <a href="/pages/products.html" onclick="redirect()" class="add-to-cart">Add to cart</a>
+
+            </div>
+        </div>
+        <div class="preview" data-target="p7">
+            <img class="fa-xmark" src="images/home_images/multiply-sign.png">
+            <img src="images/home_images/printer3.png">
+            <h3>Epson ecoTank L4150</h3>
+            <div class="stars flex-container">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star.png" alt="">
+                <img src="images/home_images/star.png" alt="">
+                <span>( 200 )</span>
+            </div>
+            <p>The Epson EcoTank L4150 is a cartridge-free printer that comes with up to three years worth of ink. </p>
+            <div class="price">$850.00</div>
+            <div class="button">
+                <a href="/pages/products.html" onclick="redirect()" class="buy">Buy now</a>
+                <a href="/pages/products.html" onclick="redirect()" class="add-to-cart">Add to cart</a>
+
+            </div>
+        </div>
+        <div class="preview" data-target="p8">
+            <img class="fa-xmark" src="images/home_images/multiply-sign.png">
+            <img src="images/home_images/printer3.png">
+            <h3>The Cannon PIXMA E510</h3>
+            <div class="stars flex-container">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+                <img src="images/home_images/star (1).png">
+
+                <span>( 200 )</span>
+            </div>
+            <p>The Cannon PIXMA E510 is an all-in-one printer designed for low-cost printer</p>
+            <div class="price">$933.00</div>
+            <div class="button">
+                <a href="/pages/products.html" onclick="redirect()" class="buy">Buy now</a>
+                <a href="/pages/products.html" onclick="redirect()" class="add-to-cart">Add to cart</a>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="divider"></div>
+
+    <section class="fromBlog Blog-section">
+        <p style=" position:relative; z-index: -1;"> Latest Blog</p>
+        <div class="blog">
+            <div class="boxrecent">
+                <img src="../images/blog_image/pexels-olia-danilevich-5088181.jpg" alt="photo" class="blog_image">
+                <p class="paragraph2">From Profit To Progress: Our Commitment To Change.</p>
+                <p class="blog_paragraph">In today's modern and progressive era, the importance of education cannot be
+                    emphasized enough. Education not only equips individuals with valuable skills and knowledge but...
+                </p>
+                <a href="pages/blogpages/blog5.html" alt="link">
+                    <button class="recentbtn button_design">Read more</button>
+                </a>
+            </div>
+
+            <div class="boxrecent">
+                <img src="../images/blog_image/pexels-alena-darmel-7710082.jpg" alt="photo" class="blog_image">
+                <p class="paragraph2">From Good To Great, Quality Meets Innovation</p>
+                <p class="blog_paragraph">In today's digital age, printers have become an essential tool for both
+                    personal and professional use. At our ecommerce business, we are proud to offer...</p>
+                <a href="pages/blogpages/blog6.html" alt="link">
+                    <button class="recentbtn button_design">Read more</button>
+                </a>
+            </div>
+
+            <div class="boxrecent">
+                <img src="../images/blog_image/pexels-rdne-stock-project-7362965.jpg" class="blog_image" alt="photo">
+                <p class="paragraph2">Turning Complaints Into Opportunities</p>
+                <p class="blog_paragraph">In a rapidly globalizing world, the efficient and secure transportation of
+                    products has become a crucial aspect of international trade. Companies that can...</p>
+                <a href="pages/blogpages/blog6.html" alt="link">
+                    <button class="recentbtn button_design">Read more</button>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="footer ">
+        <div class="emails footer-flex">
+            <p>Email: InkspotPrint@gmail.com</p>
+            <p>Phone: 01-21321,01-321321</p>
+            <p>Address: Kathmandu,Nepal</p>
+        </div>
+
+        <div class="navigations">
+            <div style="font-size: 2rem;">
+                Navigations
+            </div>
+            <div class="footer-flex">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="/pages/blogpage.html">Blog</a></div>
+                <div><a href="/pages/products.html">Product</a></div>
+                <div><a href="/pages/research.html">Research</a></div>
+                <div><a href="/pages/aboutus.html">About Us</a></div>
+            </div>
+        </div>
+        <div class="socials footer-flex">
+            <div style="font-size: 2rem;">Socials</div>
+            <div>
+                <a href="https://www.facebook.com/"><img src="images/home_images/facbook.png" alt=""></a>
+                <a href="https://www.instagram.com/"><img src="images/home_images/instagram.png" alt=""></a>
+                <a href="https://github.com/"><img src="images/home_images/github.png" alt=""></a>
+                <a href="https://twitter.com/?lang=en"> <img src="images/home_images/twitter.png" alt=""></a>
+            </div>
+        </div>
+        <a style="text-decoration: none;" href="#top">
+            <div class="contacts">
+                <div> Go To Top</div>
+                <div> <img src="images/home_images/uparrow.png" width="30px" alt=""></div>
+            </div>
+        </a>
+    </section>
+
+
+    <!-- link to javascript  -->
+    <script>
+        function homepage() {
+            let productPreview = document.querySelector(".product-preview");
+            let preview = productPreview.querySelectorAll(".product-preview .preview");
+
+            document
+                .querySelectorAll(".product-card-container .product-card")
+                .forEach((product) => {
+                    product.onclick = () => {
+                        productPreview.style.display = "flex";
+                        let dataName = product.getAttribute("data-name");
+                        preview.forEach((previews) => {
+                            let dataTarget = previews.getAttribute("data-target");
+                            if (dataName == dataTarget) {
+                                previews.classList.add("active");
+                            }
+                        });
+                    };
+                });
+
+            preview.forEach((close) => {
+                close.querySelector(".fa-xmark").onclick = () => {
+                    close.classList.remove("active");
+                    productPreview.style.display = "none";
+                };
+            });
+        }
+
+        function redirect() {
+            alert("Redirecting to product page");
+        }
+        //calling the function
+        homepage()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Out</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&family=Sora&family=Work+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/images/home_images/fav.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: rgba(255, 1, 103, 0);
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin: auto;
+            font-family: 'Roboto Slab', 'serif';
+        }
+
+        main {
+            display: flex;
+            margin-left: 5%;
+        }
+
+        #background {
+            width: 95%;
+            margin: auto;
+
+        }
+
+        .information {
+            width: 50%;
+            border: 1px solid;
+            padding: 32px;
+        }
+
+        .order_summary {
+            width: 50%;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .name {
+            display: flex;
+        }
+
+        .first_name {
+            width: 50%;
+        }
+
+        .last_name {
+            width: 50%;
+        }
+
+        input {
+            width: 80%;
+            height: 1.75rem;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-family: 'Roboto', 'sans-serif';
+            margin: 3px;
+        }
+
+        .order_summary {
+            margin-left: 60px;
+            border: 1px solid;
+            padding: 32px;
+        }
+
+        .payment {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+        .check {
+            font-size: 1.3rem;
+            height: 1.8rem;
+            width: 30%;
+            background-color: #fe4c50;
+            border: 1px solid black;
+            color: white;
+            border-radius: 5px;
+        }
+
+        #popup {
+            width: 250px;
+            height: 300px;
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            padding: 10px;
+            border: 1px solid #fe4c50;
+            background-color: white;
+            font-family: 'Work Sans', 'sans-serif';
+            transform: translate(-40%, -100%) scale(0.1);
+            visibility: hidden;
+            transition: transform 1s ease-out;
+            z-index: 3;
+        }
+
+        #ok {
+            width: 60%;
+            margin-top: 10px;
+            margin-left: 30px;
+            font-size: 16px;
+            background-color: #fe4c50;
+            color: white;
+            border: 1px solid #fe4c50;
+            border-radius: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id="popup">
+        <img src="../images/icons/tick.png" style="width: 100px; margin-left: 60px;" alt="tick image">
+        <h2>Your order has been confirmed.</h2>
+        <p>Your shipping information will be emailed.</p>
+        <button id="ok" onclick="closePop()">Ok</button>
+    </div>
+
+    <!--Creating a main section -->
+    <main id="background">
+        <!--Separating the div into information -->
+        <div class="information">
+            <h1 style="margin-bottom:20px;">Information</h1>
+            <!--Creating form-->
+            <form action="" id="form" onsubmit="">
+                <!--Creating division for the customer details-->
+                <div class="details">
+                    <div class="name">
+                        <div class="first_name">
+                            <p class="label">First Name</p>
+                            <input type="text" name="fName" style="width: 90%;" required>
+                        </div>
+                        <div class="last_name">
+                            <p class="label">Last Name</p>
+                            <input type="text" name="lName" style="width: 90%;" required>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <p class="label">Address 1</p>
+                        <input type="text" name="address1" required>
+                    </div>
+                    <div class="address">
+                        <p class="label">Address 2</p>
+                        <input type="text" name="address2">
+                    </div>
+                    <div class="location" style="display: flex;">
+                        <div class="city" style="width: 50%;">
+                            <p class="label">City</p>
+                            <input type="text" name="city">
+                        </div>
+                        <div class="state">
+                            <p class="label">State</p>
+                            <select name="select_state" id="" style="height: 2rem; border: 1px solid black;" required>
+                                <option value="Province1">Province 1</option>
+                                <option value="Province2">Province 2</option>
+                                <option value="Province3">Province 3</option>
+                                <option value="Province4">Province 4</option>
+                                <option value="Province5">Province 5</option>
+                                <option value="Province6">Province 6</option>
+                                <option value="Province7">Province 7</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="number">
+                        <p class="label">Number</p>
+                        <input type="text" placeholder="##########" pattern="[0-9]{10}" id="number" name="number"
+                            required>
+                    </div>
+                    <div class="email">
+                        <p class="label">Email</p>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                </div>
+                <!--Creating div fot the button used to submit the form-->
+                <div class="check_out">
+                    <button id="btnCheck" class="check">Confirm</button>
+                </div>
+
+            </form>
+        </div>
+        <!--Showing the details of the product-->
+        <div class="order_summary">
+            <h1>Order Summary</h1>
+            <hr>
+            <div class="payment">
+                <p>Order Subtotal</p>
+                <p id="total"></p>
+                <p>Shipping</p>
+                <p class="shipping_price">$10</p>
+                <p>Tax</p>
+                <p id="tax">$0.00</p>
+            </div>
+            <hr>
+            <p>Enter Coupoun Code</p>
+            <div class="coupoun" style="display: flex; ">
+                <input type="text" id='coupoun_code' style="width:60%; margin-right: 2px;">
+                <button class="check" onclick="coupounCheck()">Check</button>
+            </div>
+            <hr>
+            <div class="total_amount"
+                style="display:flex; font-family:'Roboto';justify-content:space-between;margin-right:200px">
+                <h2>Total</h2> &nbsp;
+                <h2 id="total_pay"></h2>
+            </div>
+            <hr>
+
+        </div>
+    </main>
+    <script>
+        //Getting the total price from the product page store in the local storage
+        let store = localStorage.getItem('total');
+        document.getElementById('total').innerText = '$' + store;
+        //calculating the tax
+        let tax = Math.trunc((0.13 * Number(store)));
+        document.getElementById('tax').innerText = '$' + tax;
+        let coupounList = ['dis10', 'sale10'];
+        let discount = 0;
+        let subtotal = Number(store) + tax + 10 - discount;
+        document.getElementById('total_pay').innerText = '$' + subtotal;
+        let popup = document.getElementById('popup');
+        let background = document.getElementById('background');
+        let checkbtn = document.getElementById('btnCheck');
+        checkbtn.addEventListener('click', (e) => {
+            //getting the values inputed
+            let firstName = document.forms['form']['fName'].value;
+            let lastName = document.forms['form']['lName'].value;
+            let address = document.forms['form']['address1'].value;
+            let city = document.forms['form']['city'].value;
+            let number = document.forms['form']['number'].value;
+            let email = document.forms['form']['email'].value;
+            let checkEmail = document.getElementById('email');
+            let checkNumber = document.getElementById('number');
+            //making sure the customer has inputed valid information
+            if (firstName == '' || lastName == '' || address == '' || city == '' || number == '' || email == '') {
+                alert('Please enter all the information');
+            }
+            else {
+                console.log(checkEmail.checkValidity());
+                if (checkEmail.checkValidity() && checkNumber.checkValidity()) {
+                    e.preventDefault();
+                    popup.style.visibility = 'visible';
+                    popup.style.transform = 'translate(0,0) scale(1)';
+                    background.style.filter = 'blur(5px)';
+                }
+            }
+        })
+        //close the pop up
+        let closePop = () => {
+            popup.style.visibility = 'hidden';
+            popup.style.transform = ' translate(-40%, -100%) scale(0.1)';
+            background.style.filter = 'blur(0)';
+        }
+
+        let usedCoupoun = [];
+        //checking if the coupoun enter is valid 
+        let coupounCheck = () => {
+
+            let coupounCode = document.getElementById('coupoun_code');
+            let valid = false;
+            //running a loop to get all the coupoun from the list
+            for (let i = 0; i < coupounList.length; i++) {
+                //checking if the user entered coupoun is in the list
+                if (coupounList[i] == coupounCode.value) {
+                    //providing the discount if the coupoun is valid
+                    discount = 0.1 * Number(store);
+                    subtotal = Number(store) + tax + 10 - discount;
+                    document.getElementById('total_pay').innerText = '$' + subtotal
+                    newCoupoun.push(coupounList[i]);
+                    coupounList.splice(i, 1);
+                    valid = true;
+                }
+            }
+            if (valid) {
+                //displaying message if the coupoun is accpeted
+                alert("Your coupoun has been accepted");
+            }
+            else {
+                let recheck = false;
+                //getting the value from the used coupoun list
+                for (let val of usedCoupoun) {
+                    //checking if it is already used
+                    if (val == coupounCode.value);
+                    {
+                        recheck = true;
+                    }
+                }
+                if (recheck) {
+                    //displaying it is already used if found in the list
+                    alert("You can't use the same coupoun again.");
+                }
+                else {
+                    //displaying invalid if the coupoun is not in the list
+                    alert('Please enter a valid coupoun.');
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&family=Work+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/images/home_images/fav.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: #d2d2d2;
+            font-family: 'Work Sans', 'sans-serif';
+
+        }
+
+        button {
+            padding: 15px;
+            margin: 10px;
+            background-color: #fe4c50;
+            ;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            transition: all ease-in-out 0.3s;
+        }
+
+        button:hover {
+            scale: 1.1;
+            box-shadow: 0 8px 16px #fe4c50;
+
+        }
+
+
+
+        .portfolioContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .space {
+            height: 100px;
+        }
+
+        .portfolio-card {
+            background-color: #ebe6d8;
+            width: 70%;
+            margin: auto;
+            padding: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+            transition: all ease-in-out 0.3s;
+        }
+
+        .portfolio-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .portfolio-card>img {
+            height: 200px;
+            width: 200px;
+            border: 1px solid;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+
+        .portfolio-card>h1 {
+            display: flex;
+            gap: 5px;
+        }
+
+        pre {
+            font-size: 16px;
+            font-weight: bold;
+
+        }
+
+        table tr:nth-of-type(3) {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../aboutUs.html"> <button>Go back</button></a>
+
+
+    <div class="space"></div>
+    <div class="portfolioContainer">
+        <div class="portfolio-card">
+            <img src="/images/portfolio_images/erika.jpg">
+            <div style="text-align: center;">
+                <p> Hi I am Erika Shrestha.</p>
+                <p>I am responsible for the blogging of our website, a role that requires dedication, creativity, and
+                    the ability to engage with a wide audience. I create posts that not only entertain but also inform
+                    and inspire by consistently providing valuable content that resonates with our targeted audiences.
+                </p>
+            </div>
+
+        </div>
+        <div class="portfolio-card">
+            <h1>Personal Details </h1>
+            <pre>
+
+
+DOB           : 2004-12-16
+
+Phone Number  :  +977 9834509123
+
+Address        : Budhanilkantha, Kathmandu.
+
+High School    : Malpi institute.
+
+School         : The chandbagh school.
+        </pre>
+        </div>
+        <div class="portfolio-card">
+            <h1>Education </h1>
+            <table>
+                <tr>
+                    <td rowspan="3">School (SEE) </td>
+                    <td>School</td>
+                    <td>: The chandbagh school</td>
+                </tr>
+                <tr>
+                    <td>Grade</td>
+                    <td>: A+</td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px solid black;">GPA</td>
+                    <td style="border-bottom: 1px solid black;">: 3.95</td>
+                </tr>
+                <tr>
+                    <td rowspan=" 4">High School (A levels)</td>
+                    <td>High School</td>
+                    <td>: Malpi institute</td>
+                </tr>
+                <tr>
+                    <td>Grade</td>
+                    <td>: B</td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px solid black;">GPA</td>
+                    <td style="border-bottom: 1px solid black;">: 3.40</td>
+                </tr>
+                <tr>
+                    <td>Stream</td>
+                    <td>: computer science (AI)</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">College</td>
+                    <td>Name</td>
+                    <td>:Islington college</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>: ongoing</td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="portfolio-card">
+            <h1>Skills</h1>
+            <div>
+                <p>&#8594 Dedication to delivering valuable and thought-provoking articles that resonate with the
+                    audiences.</p>
+                <p>&#8594 Effective communication and collaboration skills.</p>
+                <p>&#8594 Proficiency in design tools.</p>
+                <p>&#8594 A good knowledge of programming.</p>
+                <p>&#8594 A unique writing style and creativity skills.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-card">
+            <h1>Contacts</h1><br>
+            <div>
+                <a href="https://www.facebook.com/" target="_blank"><img src="/images/home_images/facbook.png"
+                        alt=""></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="/images/home_images/instagram.png"
+                        alt=""></a>
+                <a href="https://twitter.com/" target="_blank"><img src="/images/home_images/twitter.png" alt=""></a>
+                <a href="https://github.com/" target="_blank"><img src="/images/home_images/github.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="space"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--External css link-->
+  <link rel="stylesheet" href="../CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link for the font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&family=Work+Sans&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="/images/home_images/fav.png" type="image/x-icon">
+  <title>Blog page</title>
+
+  <!--internal css-->
+  <style>
+    /* here, star is used to set the margins of all to 0 */
+    * {
+      margin: 0px;
+    }
+
+    /* body {
+      margin-left: 10%;
+    } */
+
+
+    /*css for the contents in main section*/
+    main {
+      background-color: #efeeec;
+      width: 99%;
+
+      margin-right: 0.5%;
+      margin-left: 0.5%;
+
+      margin-bottom: 10px;
+    }
+
+
+
+
+    /* This is the internal css class for trending posts*/
+    .mydivision {
+      width: 24%;
+      height: 520px;
+      float: left;
+      margin-top: 20px;
+      margin-left: 0.5%;
+      margin-right: 0.5%;
+      margin-bottom: 30px;
+      box-shadow: 2px 5px 5px 2px lightgray;
+      border-radius: 10px;
+      position: relative;
+      text-align: left;
+    }
+
+    /*This is teh css for the details inside the mydivision class*/
+    .details_container {
+      margin: 10px;
+      font-size: 18px;
+      font-family: 'Work Sans', 'sans-serif';
+      font-weight: bold;
+    }
+
+    /* Css for the text of trending post division*/
+    .paragraph {
+
+      font-family: 'Work Sans', sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 5px;
+
+    }
+
+    /* this is for the trending posts button*/
+    .button {
+
+      background-color: #efeeec;
+      opacity: 80%;
+      font-size: 25px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      margin-left: 70px;
+
+    }
+
+    /*to hover the trending buttons*/
+    .button:hover {
+      color: #fe4c50;
+      transform: scale(1.1);
+    }
+
+    /* A css class for the division of email form */
+    .news {
+
+
+      width: 100%;
+      height: 250px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      margin-left: 10%;
+      margin-right: 10%;
+      position: relative;
+
+    }
+
+    /* the news text class*/
+    .lettertext {
+
+      position: absolute;
+      text-align: left;
+      top: 25%;
+      left: 10%;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Roboto Slab', 'serif';
+    }
+
+    /*A css for the form*/
+    .formtext {
+
+      position: absolute;
+      top: 30%;
+      right: 20%;
+      font-size: medium;
+    }
+
+    /*A subscription button*/
+    .sub_btn {
+      height: 30px;
+      width: 100px;
+      font-size: 16px;
+      margin-left: 0;
+      border-radius: 5px;
+    }
+
+
+    /* an internal css for division after news subscription */
+    .gif {
+
+      background-color: #efeeec;
+      width: 100%;
+      height: 600px;
+      margin-top: 10px;
+
+
+    }
+
+    /* This css is for the small divisions inside the division of gif class */
+    .gifdivision {
+
+      background-color: #efeeec;
+      width: 49.55%;
+      height: 295px;
+      float: left;
+      margin: 0 5px 5px 0;
+
+
+    }
+
+    /* A css for the division of header recent posts*/
+    .recent {
+
+      background-color: #efeeec;
+      width: 100%;
+      height: 740px;
+
+    }
+
+    /*class for the division of recent posts */
+    .boxrecent {
+      box-shadow: 2px 5px 5px 2px lightgray;
+      width: 30%;
+      height: 570px;
+      float: left;
+      margin-top: 20px;
+      margin-left: 20px;
+      border-radius: 10px;
+
+
+    }
+
+    /* Text area of the division recent posts*/
+    .paragraph2 {
+
+      font-family: 'Work Sans', 'sans-serif';
+      font-size: 22px;
+      font-weight: bold;
+      padding: 10px;
+
+    }
+
+    /* css class for recent posts button*/
+    .recentbtn {
+
+      opacity: 70%;
+      background-color: #efeeec;
+      font-size: 25px;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      margin-left: 115px;
+
+
+    }
+
+    /*to hover the recent buttons*/
+    .recentbtn:hover {
+      color: #fe4c50;
+      background-color: #efeeec;
+      transform: scale(1.1);
+    }
+
+    /*A css class for header  division customer diaries*/
+    .customer {
+
+      background-color: #fe4c50;
+      font-family: 'Roboto Slab', 'serif';
+      color: white;
+      width: 100%;
+      height: 65px;
+      text-align: center;
+      font-size: 35px;
+      font-weight: bold;
+      margin-top: 30px;
+      padding-top: 10px;
+
+
+    }
+
+
+    /*for small division of small intro to customer diaries*/
+    .titleforcustomer {
+
+      background-color: #efeeec;
+      width: 96.5%;
+      height: 80px;
+      padding: 20px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Work Sans', 'sans-serif';
+    }
+
+    /*For first division after intro*/
+    .customerpos {
+
+      position: relative;
+      background-color: #efeeec;
+      border-radius: 20px;
+      width: 32.75%;
+      height: 400px;
+      float: left;
+      margin-left: 5px;
+    }
+
+    /*for text of first division and second division*/
+    .customertext {
+
+      position: absolute;
+      text-align: left;
+      font-weight: bold;
+      top: 80%;
+      padding-left: 5px;
+      padding-right: 5px;
+      color: #efeeec;
+      font-family: 'Roboto', 'sans-serif';
+    }
+
+    /*for second division*/
+    .customerpos2 {
+
+      position: relative;
+      background-color: #efeeec;
+      border-radius: 20px;
+      width: 49.25%;
+      height: 300px;
+      float: left;
+      margin-left: 5px;
+    }
+  </style>
+
+
+  <script>
+
+    //A function to validate the given email address
+    function validateForm() {
+      var address = document.forms["messageForm"]["mail"].value;
+
+      if (address == "") {
+
+        alert("Sorry! Your email was not submitted. Please try again.");
+      }
+
+      else {
+
+        alert("Thankyou!!! Your email has been successfully submitted.")
+      }
+    }
+  </script>
+</head>
+
+<!--A document page-->
+
+<body style="background-color:#efeeec; overflow-x: hidden;">
+
+
+  <!--Creating a wrapper-->
+  <header>
+    <nav>
+      <div class="navbar flex-container">
+        <div class="logo">
+          <h1><a href="/index.html">
+              <img src="/images/home_images/fav.png" alt="" height="60px">
+            </a></h1>
+        </div>
+        <div class="nav-links">
+          <ul class="flex-container margin-auto">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/products.html">Product</a></li>
+            <li><a href="/pages/research.html">Research</a></li>
+            <li><a style="color: red;" href="/pages/blogpage.html">Blog</a></li>
+            <li><a href="/pages/AboutUs.html">About us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <!--This includes all the header,footer and divisions for blog page-->
+  <div style="background-color:#efeeec; width:95%; padding-top: 10px; margin: 0 auto;">
+    <!--The body part of the wrapper-->
+    <main>
+      <!--Division for introduction of blog page-->
+      <div style="background-color:#BC8F8F; width:100%; height: 300px;">
+        <img src="../images/background_image.png" alt="photo" style="width:50%; height:100%;" />
+        <img src="../images/background_image.png" alt="photo" style="width:50%; height:100%; float:left;" />
+        <div class="intro_div">
+          <h2 class="intro" style="margin-top: 50px;">
+            <span class="bright">Welcome</span>
+            <span class="dark">To</span>
+            <span class="bright">Our</span>
+            <span class="dark">Tech</span>
+            <span class="bright">Haven,</span>
+            <br>
+            <span class="dark">Where</span>
+            <span class="bright">Innovation</span>
+            <span class="dark">Meets</span>
+            <span class="bright">The</span>
+            <span class="dark">Ink!</span>
+
+          </h2>
+        </div>
+      </div>
+
+      <!--division for header Trending posts-->
+      <div style="background-color:#fe4c50; width:100%; height:60px;">
+        <h1 class="headings" style="color: white;">Trending post</h1>
+      </div>
+
+      <!--Division of all Trending posts-->
+      <div style="background-color:#efeeec; width:99.30%; height:600px;">
+        <div class="mydivision">
+          <img src="../images/blog_image/pexels-ila-bappa-ibrahim-19545617.jpg" alt=business
+            style="width:100%; height:350px; border-radius:10px 10px 0px 0px">
+          <div class="details_container">
+            <p><small>24th January 2024</small>
+              <br><br>
+              Let's Dive Into Riveting Saga Of Technology's Grip On Our Daily Life.
+            </p>
+            <a href="blogpages/blog1.html" alt="link">
+              <button class="button">Read more</button>
+            </a>
+          </div>
+
+
+        </div>
+
+        <div class="mydivision">
+          <img src="../images/blog_image/pexels-cliff-booth-4058226.jpg" alt=business
+            style="width:100%;height: 350px;border-radius:10px 10px 0px 0px">
+          <div class="details_container">
+            <p><small>16th December 2023</small>
+              <br><br>
+              Can't Imagine A Day Without Your Smartphone?
+            </p>
+            <a href="blogpages/blog2.html" alt="link">
+              <button class="button" style="margin-top: 35px;">Read more</button>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="mydivision">
+          <img src="../images/blog_image/pexels-anete-lusina-4792283.jpg" alt=business
+            style="width:100%;height: 350px;border-radius:10px 10px 0px 0px">
+          <div class="details_container">
+            <p><small>17th June 2022</small>
+              <br><br>
+              Stay ahead in the game with high-quality prints for your business.
+            </p>
+            <a href="blogpages/blog3.html" alt="link">
+              <button class="button">Read more</button>
+            </a>
+          </div>
+          </a>
+        </div>
+
+        <div class="mydivision">
+          <img src="../images/blog_image/pexels-karolina-grabowska-7679649.jpg" alt=business
+            style="width:100%;height:350px;border-radius:10px 10px 0px 0px">
+          <div class="details_container">
+            <p><small>27th August 2021</small>
+              <br><br>
+              Let's Explore How Technology Can Propel Your Business Forward.
+            </p>
+            <a href="blogpages/blog4.html" alt="link">
+              <button class="button">Read more</button>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!--Division for form -->
+      <div class="news">
+        <img src="../images/blog_image/new.jpeg" alt="news" width="80%" height="200px">
+        <div class="lettertext">Newsletter Subscribe
+          <br>For more blog updates.
+        </div>
+
+        <!--A form with submit button-->
+        <div class="formtext">
+          <form name="messageForm" onsubmit="validateForm()">
+            <input type="email" name="mail" placeholder="Email Address"
+              style="height: 30px; width: 300px; border-radius: 5px;" required>
+            <button onclick="validateForm()" class="sub_btn button_design">Subscribe</button>
+          </form>
+        </div>
+
+
+      </div>
+
+
+
+      <!--Division after news -->
+      <div class="gif">
+
+        <!-- 4 divisions for 2 videos and 2 text area-->
+        <!--division for text-->
+        <div class="gifdivision">
+          <h1 class="headings"> Our story</h1>
+          <p style="padding:5px; font-weight: bold; font-family:  'Work Sans', 'sans-serif';">At our core, we are
+            driven by
+            a need to improve the lives of our customers.
+            Our craftsmanship is the product of years of hardwore, wherein we push the boundaries of innovation to bring
+            you thr best printers possible.
+            <br><br>
+            We are pround to share the acclaim that Clickety has received from the tech community, having been honored
+            with
+            the venerable BLI award multiple times.
+            <br><br>
+            Despite the recognition for our efforts,our accolades have only incentivized us to further refine our
+            craftsmanship.
+          </p>
+
+        </div>
+
+        <!-- division for video-->
+        <div class="gifdivision">
+          <video width="100%" height="295px" autoplay loop>
+            <source src="../images/blog_image/pexels-roman-odintsov-10159703 (Original).mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!--division for video-->
+        <div class="gifdivision">
+          <video width="100%" height="295px" autoplay loop>
+            <source src="../images/blog_image/pexels-anete-lusina-5734087 (2160p).mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!--division for text-->
+        <div class="gifdivision">
+          <h1 class="headings">Our value</h1>
+          <h2 style="font-size:15px; font-style: italic; font-family: 'Work Sans', 'sans-serif';">COMMITMENT TO QUALITY,
+          </h2>
+          <p style="padding:10px; font-weight: bold; font-family:  'Work Sans', 'sans-serif';">The clickety team
+            engineered
+            its first product in 2019, creating a comprehensive set of 5 reasonable 3D printers
+            conveniently packaged in a proper box.
+            <br><br>
+            We've continued to approach our product development with same ingenuity, incorporating feedback from the
+            community
+            and other professionals to meticulously craft and create our printers.
+          </p>
+        </div>
+
+      </div>
+
+      <!--division for header recent posts-->
+      <div class="recent" style="height:60px; margin-top:20px; background-color: #fe4c50;">
+        <h2 class="headings" style="color: white;">Recent posts</h2>
+      </div>
+
+      <!--Division for all recent posts-->
+      <div style=" background-color: #efeeec; width:99.30%; height:600px; ">
+
+        <div class="boxrecent" style="margin-left:40px">
+          <img src="../images/blog_image/pexels-olia-danilevich-5088181.jpg" alt="photo" width="100%" height="400px"
+            style="border-radius:10px 10px 0px 0px;" />
+          <p class="paragraph2"><small>11th May 2020</small>
+            <br><br>
+            From Profit To Progress: Our Commitment To Change.
+          </p>
+          <a href="blogpages/blog5.html" alt="linkho">
+            <button class="recentbtn">Read more</button>
+          </a>
+        </div>
+
+        <div class="boxrecent">
+          <img src="../images/blog_image/pexels-alena-darmel-7710082.jpg" alt="photo" width="100%" height="400px"
+            style="border-radius:10px 10px 0px 0px;" />
+          <p class="paragraph2"><small>9th February 2019</small>
+            <br><br>
+            From Good To Great, Quality Meets Innovation.
+          </p>
+          <a href="blogpages/blog6.html" alt="linkho">
+            <button class="recentbtn">Read more</button>
+          </a>
+        </div>
+
+        <div class="boxrecent">
+          <img src="../images/blog_image/pexels-rdne-stock-project-7362965.jpg" alt="photo" width="100%" height="400px"
+            style="border-radius:10px 10px 0px 0px;" />
+          <p class="paragraph2"><small>20th August 2022</small>
+            <br><br>
+            Turning Complaints Into Opportunities.
+          </p>
+          <a href="blogpages/blog7.html" alt="linkho">
+            <button class="recentbtn">Read more</button>
+          </a>
+        </div>
+
+      </div>
+
+      <!--division for header and intro of customer diaries-->
+      <div class="customer">Customers diaries</div>
+      <div class="titleforcustomer">From Click To Doorstep, From a Review To Smiles.</div>
+      <div style="background-color:#efeeec; width:100%; height:400px;">
+
+        <!--first division for customer review-->
+        <div class="customerpos">
+          <img src="../images/blog_image/pexels-blue-bird-7218518.jpg" alt="photo" width="100%" height="400px"
+            style="border-radius: 20px;" />
+          <div class="customertext">29th july'20<br>"The printer helped us bond more during home shift."</div>
+        </div>
+
+        <div class="customerpos">
+          <img src="../images/blog_image/pexels-alina-matveycheva-19089106.jpg" alt="photo" width="100%" height="400px"
+            style="border-radius: 20px;" />
+          <div class="customertext">14th dec'21<br>"It helps to collect memories."</div>
+        </div>
+
+        <div class="customerpos" style="margin-right:5px;">
+          <img src="../images/blog_image/pexels-mizuno-k-12911715.jpg" alt="photo" width="100%" height="400px"
+            style="border-radius: 20px;" />
+          <div class="customertext">04th june'22<br>"Thank you so much.It's alot easier to make documents."</div>
+        </div>
+
+      </div>
+
+      <!--second division for customer review-->
+      <div style="width:100%; height:300px; background-color:#efeeec; border-radius: 20px; margin-top:5px;">
+        <div class="customerpos2">
+          <img src="../images/blog_image/pexels-artem-podrez-5025646.jpg" alt="photo" width="100%" height="300px"
+            style="border-radius: 20px; float:left;" />
+          <div class="customertext">28th feb'23<br>"You guys have the fastest shipping I've ever seen."</div>
+        </div>
+
+        <div class="customerpos2" style="margin-right:5px">
+          <img src="../images/blog_image/pexels-george-milton-7014408.jpg" alt="photo" width="100%" height="300px"
+            style="border-radius: 20px; float:right;" />
+          <div class="customertext">17th jan'24<br>"The printer really suits my office.The design is beautiful."</div>
+        </div>
+
+      </div>
+      <section class="footer ">
+        <div class="emails footer-flex">
+          <p>Email: InkspotPrint@gmail.com</p>
+          <p>Phone: 01-21321,01-321321</p>
+          <p>Address: Kathmandu,Nepal</p>
+        </div>
+
+        <div class="navigations">
+          <div style="font-size: 2rem;">
+            Navigations
+          </div>
+          <div class="footer-flex">
+            <div><a href="index.html">Home</a></div>
+            <div><a href="/pages/blogpage.html">Blog</a></div>
+            <div><a href="/pages/products.html">Product</a></div>
+            <div><a href="/pages/research.html">Research</a></div>
+            <div><a href="/pages/aboutus.html">About Us</a></div>
+          </div>
+        </div>
+        <div class="socials footer-flex">
+          <div style="font-size: 2rem;">Socials</div>
+          <div>
+            <a href="https://www.facebook.com/"><img src="/images/home_images/facbook.png" alt=""></a>
+            <a href="https://www.instagram.com/"><img src="/images/home_images/instagram.png" alt=""></a>
+            <a href="https://github.com/"><img src="/images/home_images/github.png" alt=""></a>
+            <a href="https://twitter.com/?lang=en"> <img src="/images/home_images/twitter.png" alt=""></a>
+          </div>
+        </div>
+        <a style="text-decoration:none;" href="#top">
+          <div class="contacts">
+            <div> Go To Top</div>
+            <div> <img src="/images/home_images/uparrow.png" width="30px" alt=""></div>
+          </div>
+        </a>
+      </section>
+    </main>
+  </div>
+
+</body>
+
+</html>

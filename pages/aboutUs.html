@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&family=Work+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/images/home_images/fav.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Work Sans', 'sans-serif';
+            margin: 0;
+            padding: 0;
+            background-color: #eeefe2;
+        }
+
+        .title {
+            text-align: center;
+            padding: 30px;
+            font-size: 28px;
+        }
+
+
+
+        .aboutUS .whatWeDo {
+            width: 80%;
+            margin: auto;
+            padding: 26px;
+        }
+
+
+
+        .inkspot {
+            background-color: #fe4c50;
+            padding: 50px;
+            font-size: 25px;
+            width: 40%;
+            color: #fff;
+            margin-bottom: 30px;
+            border-radius: 30px;
+            transition: all ease-in-out 0.5s;
+            margin-left: 20px;
+        }
+
+        .inkspot:hover {
+            box-shadow: 0 1rem 1rem rgba(8, 132, 226, 0.5);
+        }
+
+        .aboutUS .whatWeDo :nth-of-type(2) {
+            padding: 40px;
+            font-size: 20px;
+            width: 400px;
+            margin-left: 50%;
+
+        }
+
+        .ourTeam {
+            text-align: center;
+            font-size: 20px;
+            padding: 30px;
+        }
+
+
+        .members {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .member23 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .teamMembers {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .members img {
+            height: 150px;
+            width: 150px;
+            border-radius: 11rem;
+            box-shadow: 0 0 2px 2px white, 0 0 3px 4px;
+            overflow: hidden;
+            object-fit: cover;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .members img:hover {
+            scale: 1.2;
+        }
+
+        /* feedback form  */
+        .feedback-container {
+            width: 500px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: black;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .feedback-container h2 {
+            color: #00c9fa;
+            font-size: 40px;
+            margin-top: 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        input[type="submit"] {
+            background-color: black;
+            background-color: #00c9fa;
+            color: #fff;
+            font-weight: bold;
+            font-size: 17px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+
+        input[type="submit"]:hover {
+            background-color: #454b45;
+        }
+
+        .footer {
+            background-color: #fe4c50;
+        }
+
+        .footer a img {
+            height: 20px;
+            aspect-ratio: 3/2;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- This is the header section -->
+    <header>
+        <nav>
+            <div class="navbar flex-container">
+                <div class="logo">
+                    <h1><a href="/index.html">
+                            <img src="/images/home_images/fav.png" alt="" height="60px">
+                        </a></h1>
+                </div>
+                <div class="nav-links">
+                    <ul class="flex-container margin-auto">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/products.html">Product</a></li>
+                        <li><a href="/pages/research.html">Research</a></li>
+                        <li><a href="/pages/blogpage.html">Blog</a></li>
+                        <li><a style="color: red;" href="/pages/AboutUs.html">About us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- This is the section about the company -->
+    <section class="aboutUS">
+        <!-- Title -->
+        <div class="title">
+            <h1>About Us</h1>
+        </div>
+        <!-- What we do section -->
+        <div class="whatWeDo">
+            <!-- Inkspot description -->
+            <div class="inkspot">
+                Inspot is a printer selling ecommerce website found by dedicated and enthusiastic team members.
+                Our enthusiastic team members are committed to delivering the best printing solutions. We strive to
+                provide
+                customers with their dream printers, ensuring satisfaction with every purchase.
+            </div>
+            <!-- Team description -->
+            <div class="inkspot">
+                Four capable individuals have worked as a team to oversee the management, operation and provision of
+                top-quality printers.
+            </div>
+        </div>
+    </section>
+
+    <!-- This is the section about the team members -->
+    <section class="ourTeam">
+        <h2>Meet our team members</h2>
+        <div class="members">
+            <!-- Team member 1 -->
+            <div class="member1 teamMembers">
+                <a href="portfolio/suprim.html">
+                    <img src="/images/portfolio_images/suprim.jpg" alt="">
+                </a>
+                <p>Suprim Basnet</p>
+            </div>
+            <!-- Team members 2 and 3 -->
+            <div class="member23">
+                <div class="member2 teamMembers">
+                    <a href="portfolio/nirajan.html">
+                        <img src="/images/portfolio_images/nirajan.jpg" alt="">
+                    </a>
+                    <p>Nirajan Thapa </p>
+                </div>
+                <div class="member3 teamMembers">
+                    <a href="portfolio/erika.html">
+                        <img src="/images/portfolio_images/erika.jpg" alt="">
+                    </a>
+                    <p>Erika Shrestha</p>
+                </div>
+            </div>
+            <!-- Team member 4 -->
+            <div class="member4 teamMembers">
+                <a href="portfolio/aaditya.html">
+                    <img style="object-position: top ;" src="/images/portfolio_images/aaditya.jpeg" alt="">
+                </a>
+                <p>Aaditya Aryal</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- This is the feedback form section -->
+    <section class="feedback-container">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm">
+            <!-- Full name input -->
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <!-- Email input -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <!-- Message input -->
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <!-- Submit button -->
+            <div class="form-group">
+                <input type="submit" onclick="alerts()" value="Submit">
+            </div>
+        </form>
+    </section>
+
+    <!-- This is the footer section -->
+    <section class="footer">
+        <!-- Email, phone, and address information -->
+        <div class="emails footer-flex">
+            <p>Email: InkspotPrint@gmail.com</p>
+            <p>Phone: 01-21321,01-321321</p>
+            <p>Address: Kathmandu,Nepal</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="navigations">
+            <div style="font-size: 2rem;">
+                Navigations
+            </div>
+            <div class="footer-flex">
+                <div><a href="/index.html">Home</a></div>
+                <div><a href="/pages/blogpage.html">Blog</a></div>
+                <div><a href="/pages/products.html">Product</a></div>
+                <div><a href="/pages/research.html">Research</a></div>
+                <div><a href="/pages/aboutus.html">About Us</a></div>
+            </div>
+        </div>
+
+        <!-- Social media links -->
+        <div class="socials footer-flex">
+            <div style="font-size: 2rem;">Socials</div>
+            <div>
+                <a href="https://www.facebook.com/"><img src="/images/home_images/facebook.png" alt=""></a>
+                <a href="https://www.instagram.com/"><img src="/images/home_images/instagram.png" alt=""></a>
+                <a href="https://github.com/"><img src="/images/home_images/github.png" alt=""></a>
+                <a href="https://twitter.com/?lang=en"> <img src="/images/home_images/twitter.png" alt=""></a>
+            </div>
+        </div>
+        <a style="text-decoration: none;" href="#top">
+            <div class="contacts">
+                <div> Go To Top</div>
+                <div> <img src="/images/home_images/uparrow.png" width="30px" alt=""></div>
+            </div>
+        </a>
+    </section>
+
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+            // Prevent the form from submitting
+            event.preventDefault();
+
+            // Check if all fields are filled
+            var fullName = document.getElementById("fullName").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (fullName !== '' && email !== '' && message !== '') {
+                // If all fields are filled, show the alert
+                alert("Thank you for your feedback");
+                // You can submit the form here if needed:
+                // event.target.submit();
+            } else {
+                // If any field is empty, show an error message
+                alert("Please fill in all fields");
+            }
+        });
+    </script>
+</body>
+
+</html>

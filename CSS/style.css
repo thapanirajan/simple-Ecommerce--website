@@ -1,0 +1,836 @@
+/*Creating a root so the colors and the fonts are consistent through out the page*/
+:root {
+    --maincolor: #fe4c50;
+    --backgroumd_color: #efeeec;
+    --slabFont: 'Roboto Slab', 'serif';
+    --font: 'Roboto', 'sans-serif';
+
+}
+
+/*This is used to remove the margin or any padding that has is in a browser by default*/
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+/*Section for tag selector*/
+body {
+    background-color: var(--backgroumd_color);
+}
+
+/* Giving colors to the span class in the slogan */
+.bright {
+    color: var(--maincolor);
+
+}
+
+.dark {
+    color: #282828;
+}
+
+/*Creating a class for the font so we can give the class to all the elements that requires the font*/
+.slab {
+    font-family: 'Roboto Slab', 'serif';
+}
+
+.sans {
+    font-family: 'Roboto', 'sans-serif';
+}
+
+/*The css provides the layout to product description*/
+.product_layout {
+    display: grid;
+    visibility: hidden;
+    grid-template-columns: 1fr 1fr;
+    font-family: var(--font);
+    width: 70%;
+    height: 80%;
+    margin: 5% 15%;
+    position: fixed;
+    z-index: 3;
+    top: 5%;
+    background: white;
+    overflow: auto;
+    border: 2px solid red;
+    box-shadow: 0 0.5rem 1rem rgba(23, 9, 9, 0.5);
+}
+
+.layout_description {
+    position: relative;
+}
+
+/*placing the cross symbol is in correct postion and made responsive on hover*/
+#close_product {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+
+
+.show_quantity {
+    display: flex;
+    margin: 3px;
+    font-size: 1.3rem;
+}
+
+/*Placing the sale timer shown in the product*/
+.sale_timer {
+    display: flex;
+    margin-top: 10px;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--maincolor);
+    border-radius: 5px;
+    color: white;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3px;
+}
+
+.day_box,
+.hour_box,
+.minute_box,
+.second_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    border: 1px solid white;
+    width: 57px;
+    border-radius: 5px;
+    margin: 4px;
+    padding: 3px;
+}
+
+/*Placing the product about section*/
+.des_title {
+    position: relative;
+}
+
+#close_desc {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+#layout_about {
+    display: none;
+}
+
+
+/*Aligning the title text in center*/
+.title_container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+/*Using grid as display to create the layout of products*/
+.products {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*Defining the properties for each product*/
+.product {
+    border-radius: 19px;
+    box-shadow: 5px 6px 7px rgb(0, 0, 0, 0.2);
+    background-color: #faf8f5;
+    border: 1px solid var(--maincolor);
+    margin: 20px;
+    width: 250px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 2px; */
+}
+
+.product:hover {
+    transform: scale(1.03);
+    transition: 0.17s;
+}
+
+/*defining how we want the image to look*/
+.image_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.product_image {
+    width: 80%;
+    top: 100px;
+}
+
+/*Seprating the desciprtion of product with image*/
+.about_product {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.stars {
+    font-size: 1.5rem;
+    color: gray;
+}
+
+/*Setting the button postition and size*/
+.button_design {
+    background-color: var(--maincolor);
+    color: white;
+    border: 0.5px solid #efeeec;
+    border-radius: 9px;
+    width: 90%;
+    margin: 10px 15px 5px 15px;
+    font-size: 1.75rem;
+}
+
+.button_design:hover {
+    background-color: white;
+    color: var(--maincolor);
+    border: 1px solid var(--maincolor);
+    box-shadow: 2px 1px 2px var(--maincolor);
+    transition: 0.75;
+}
+
+.shop {
+    margin-top: 0px;
+    margin-bottom: 0;
+    border-radius: 5px;
+}
+
+/*Making optimized size for the icons used*/
+.icon {
+    color: var(--maincolor);
+    font-size: 1.5rem;
+}
+
+/*Css of the blog page*/
+
+/* This css is for all the headers */
+.headings {
+
+    font-family: var(--slabFont);
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* css for division of blog introduction*/
+.intro {
+    font-size: 40px;
+    font-family: var(--slabFont);
+}
+
+.intro_div {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+}
+
+/* /css for all the blog pages/
+
+/This is a css for title of the section./ */
+.division {
+    float: left;
+    background-color: white;
+    width: 69.5%;
+
+    font-size: 15px;
+    margin: 10px 30px 0 30px;
+    margin-left: 30px;
+    margin-right: 0.5%;
+    padding-top: 20px;
+
+}
+
+/* /This is a css for the paragraph/ */
+.division2 {
+    float: left;
+    background-color: white;
+    width: 69.5%;
+    margin-left: 30px;
+
+}
+
+/* /A css for the division of title related posts/ */
+.related {
+    font-family: var(--slabFont);
+    background-color: #efeeec;
+    width: 27%;
+    margin-top: 140px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+/* /A css for the 2 divisions of other section/ */
+.posts {
+    border: 3px solid var(--maincolor);
+    box-shadow: 2px 5px 5px 2px lightgray;
+    width: 24.5%;
+    height: 450px;
+    margin-right: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    float: right;
+}
+
+/*This is for the writing part of the 2 divisions */
+.paragraph3 {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+/* /This is to link the different blog sections for read more/ */
+.postbutton {
+
+    position: relative;
+    bottom: 10px;
+    left: 100px;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+
+
+}
+
+/* 
+/A css to hover the recent post buttons read more/ */
+.postbutton:hover {
+    color: var(--maincolor);
+    transform: scale(1.1);
+}
+
+/* /A css for division at the bottom of blog pages/ */
+.bottomdiv {
+    width: 50%;
+    height: 100px;
+    position: relative;
+    background-color: #efeeec;
+    margin-left: 10%;
+}
+
+/* /A css to style the division of left arrow/ */
+.leftarrowdiv {
+    border-radius: 50px;
+    width: 10%;
+    height: 50px;
+    position: absolute;
+    background-color: #efeeec;
+    margin-top: 10px;
+}
+
+/* /A style for left arrow/ */
+.oldarrow {
+    width: 0;
+    height: 0;
+    left: 5%;
+    border-top: 25px solid transparent;
+    border-right: 50px solid #555;
+    border-bottom: 25px solid transparent;
+}
+
+/* /A style for right arrow/ */
+.newarrow {
+    width: 0;
+    height: 0;
+    left: 25%;
+    border-top: 25px solid transparent;
+    border-left: 50px solid #555;
+    border-bottom: 25px solid transparent;
+    top: 0px;
+    position: absolute;
+}
+
+/* /To style division of right arrow/ */
+.rightarrowdiv {
+    border-radius: 50px;
+    height: 50px;
+    width: 10%;
+    position: absolute;
+    left: 85%;
+    background-color: #efeeec;
+    margin-top: 10px;
+}
+
+/*A css to style the fonts which indicates the arrows */
+.arr-font {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--slabFont);
+
+}
+
+/* A style to hover the arrows */
+.leftarrowdiv:hover,
+.rightarrowdiv:hover {
+    background-color: var(--backgroumd_color);
+    transform: scale(1.1);
+
+}
+
+/*Home page css*/
+
+
+.flex-container {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.divider {
+    width: 80%;
+    height: 0.1rem;
+    background-color: #ccc;
+    margin: 2rem auto;
+}
+
+.first-nav {
+    background-color: black;
+    color: white;
+}
+
+.slidertext {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1rem;
+    justify-content: center;
+    background-color: var(--maincolor);
+
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: 'Work Sans', 'sans-serif';
+    ;
+}
+
+.navbar {
+    padding: 10px 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.nav-links {
+    width: 100%;
+}
+
+.nav-links button {
+    padding: 10px 18px;
+    background-color: var(--maincolor);
+    color: white;
+    font-weight: bold;
+    border-radius: 9px;
+}
+
+.margin-auto {
+    gap: 2rem;
+}
+
+.margin-auto li {
+    overflow: unset;
+}
+
+.margin-auto li a {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.margin-auto li a:hover {
+    color: var(--maincolor);
+
+}
+
+.margin-auto li:nth-of-type(6) {
+    margin-left: auto;
+}
+
+.margin-auto li:nth-of-type(1) {
+    margin-left: auto;
+}
+
+.nav-links ul {
+    list-style: none;
+
+}
+
+.nav-links ul a {
+    text-decoration: none;
+    color: black;
+    padding: 1px 10px;
+}
+
+
+
+
+
+.intro-color {
+    justify-content: space-between;
+    padding: 10px 12.25rem;
+    /* background-color: #49321b; */
+    background-color: #f1cfae;
+    /* background-color: #aef1caeb; */
+    /* background-color: #3f2626; */
+    width: 90%;
+    margin: auto;
+}
+
+.intro-text {
+    line-height: 2rem;
+    padding: 20px 5px;
+}
+
+
+
+
+.btn {
+    background: transparent;
+    padding: 1rem 1.3rem;
+    font-weight: bold;
+    background-color: var(--maincolor);
+    margin-top: 2rem;
+    border: none;
+    border-radius: 2rem;
+    transition: all ease-in-out .3s;
+    outline: 3px solid var(--maincolor);
+}
+
+.btn:hover {
+    outline: 3px solid var(--maincolor);
+    outline-offset: 5px;
+}
+
+
+.image img {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.image img:hover {
+    transform: scale(1.1);
+}
+
+
+/* our services section  */
+.our-services {
+    margin-bottom: 3rem;
+}
+
+.services {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+    background-color: #f0e9e2;
+    /* background-color: #3240654d; */
+    padding: 2rem;
+}
+
+.service-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.services-icons {
+    width: 3rem;
+    aspect-ratio: 3/2;
+    mix-blend-mode: darken;
+}
+
+/* our services section ends  */
+
+/* featured product section  */
+
+
+
+.featured-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* product card  */
+
+.product-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 70%;
+    margin: auto;
+    gap: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.product-card {
+    outline: 2px solid var(--maincolor);
+    border-radius: 10px;
+    background-color: #faf8f5;
+    transition: all ease-in-out 0.3s;
+}
+
+.product-card button {
+    margin-top: 10px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-left: 10px;
+    border: 0.1rem solid #ac292b;
+}
+
+.product-card:hover {
+    outline: 3px solid var(--maincolor);
+    outline-offset: 0;
+    transform: scale(1.1);
+}
+
+
+.product-card-container .product-card img {
+    width: 150px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    transition: all ease-in-out 0.3s;
+}
+
+.product-card-container .product-card:hover img {
+    transform: scale(1.1);
+}
+
+.product-card-container .product-card h3 {
+    padding: 5px 0;
+    font-size: 1.1rem;
+}
+
+.product-card-container .product-card .price {
+    font-size: 1.1rem;
+
+}
+
+/* product-preview  */
+.product-preview {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.product-preview .preview {
+    display: none;
+    background-color: #fff;
+    width: 21rem;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    margin: 2px;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.8);
+
+}
+
+.product-preview .preview.active {
+    display: inline-block;
+}
+
+
+
+.product-preview .preview img {
+    width: 45%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+
+.fa-xmark {
+    position: absolute;
+    top: 0.9rem;
+    left: 70%;
+    height: 16px;
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: all ease-in-out 0.3s;
+}
+
+.fa-xmark:hover {
+    transform: scale(2);
+}
+
+.product-preview .preview h3 {
+    font-size: 1.5rem;
+    color: #444;
+    padding: 0.5rem 0;
+}
+
+.stars {
+    justify-content: center;
+}
+
+.product-preview .preview .stars img {
+    height: 20px;
+    width: 20px;
+}
+
+
+
+.product-preview .preview .stars span {
+    opacity: 0.8;
+}
+
+.product-preview .preview p {
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.product-preview .preview .price {
+    font-size: 1.2rem;
+    color: var(--maincolor);
+    padding: 0.7rem 0;
+}
+
+.product-preview .preview .button {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+
+}
+
+.product-preview .preview .button a {
+    flex: 1;
+    padding: 0.6rem;
+    border: 0.1rem solid #444;
+    color: #444;
+}
+
+.product-preview .preview .button a.add-to-cart {
+    background-color: #444;
+    color: white;
+}
+
+.product-preview .preview .button a.add-to-cart:hover {
+    background-color: #111;
+}
+
+.product-preview .preview .button a.buy {
+    transition: all ease-in-out 0.3s;
+}
+
+.product-preview .preview .button a.buy:hover {
+    background-color: #444;
+    color: white;
+}
+
+/* product preview ends  */
+
+/* from the blog  */
+
+
+.Blog-section {
+    /* background-color: #3f2626; */
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+
+}
+
+.fromBlog>p {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+.fromBlog>p:hover {
+    opacity: 1;
+}
+
+.blog {
+    width: 70%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.Research {
+    /* background-color: #f1cfae; */
+    padding: 2rem;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.footer-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer {
+    background-color: var(--maincolor);
+    color: white;
+    font-weight: bold;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Work Sans', 'sans-serif';
+}
+
+.footer .navigations {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer .navigations a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .navigations div:nth-child(2) {
+    gap: 1rem;
+}
+
+.footer .contacts {
+    border: 1px solid;
+    padding: 1rem;
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+.footer .contacts button {
+    padding: 0.5rem;
+    font-weight: bold;
+}
